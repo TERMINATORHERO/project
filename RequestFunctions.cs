@@ -37,7 +37,7 @@ namespace VACEfron.NET
         internal static MemoryStream ImageRequest(string endpoint)
         {
             using var httpClient = new HttpClient();
-            var getRequest = httpClient.GetAsync("http://localhost:8158/api/" + endpoint, HttpCompletionOption.ResponseContentRead);
+            var getRequest = httpClient.GetAsync("https://welcomer12.herokuapp.com/api/" + endpoint, HttpCompletionOption.ResponseContentRead);
             var responseMessage = getRequest.Result;
             if (!responseMessage.IsSuccessStatusCode)
             {
@@ -53,7 +53,7 @@ namespace VACEfron.NET
         internal static JObject MakeWebRequest(string endpoint)
         {
             var httpClient = new HttpClient();
-            var responseMessage = httpClient.GetAsync($"http://localhost:8158/api/{endpoint}");
+            var responseMessage = httpClient.GetAsync($"https://welcomer12.herokuapp.com/api/{endpoint}");
             return (JObject)JsonConvert.DeserializeObject(responseMessage.Result.Content.ReadAsStringAsync().Result);
         }
     }
