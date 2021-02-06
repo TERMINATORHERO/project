@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <title>VAC Efron</title>
+        <h1>VAC Efron</h1>
+        <h2>Dutch-Armenian Developer</h2>
+        <h3>"CSS is overated"</h3>
+        <h2><a href="http://localhost:8158/api.html" style="color: #ffffff" target="_blank" data-darhtmlkreader-inline-color="">My API</a><br>
+        <a href="https://konek0.nl" style="color: #ffffff" target="_blank" data-darkreader-inline-color="">Konek0</a></h2>
+        <h3>Places where you can find me:</h3>
+        <h2 style="color: white; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color="">
+            <a href="https://discord.gg/xJ2HRxZ" target="_blank" data-darkreader-inline-color="">Discord Server</a><br>
+            <a href="https://www.reddit.com/u/danknibba/" target="_blank" data-darkreader-inline-color="">Reddit</a><br>
+            <a href="https://steamcommunity.com/id/vacefronvevo/" target="_blank" data-darkreader-inline-color="">Steam</a><br>
+            <a href="https://www.twitch.tv/vacefroon" target="_blank" data-darkreader-inline-color="">Twitch</a><br>
+            <a href="https://github.com/VACEfron" target="_blank" data-darkreader-inline-color="">GitHub</a><br>
+            <a href="https://www.youtube.com/channel/UCo3E9-HOyuopv9VVhV4ocUw" target="_blank" data-darkreader-inline-color="">YouTube Channel</a><br>
+        </h2>
+        <button onclick="javascriptIsOverrated()">Click me (If you dare)</button>
+        <button onclick="darkMode(this)">Burn My Eyes</button>
+            <script>
+            darkMode()
+        
+            function javascriptIsOverrated(){
+                window.open('https://www.youtube.com/watch?v=d1YBv2mWll0', '_blank')
+            }    
+        
+            function darkMode(button){
+                bgColor = document.body.style.backgroundColor
+                bgColor == '' || bgColor == 'white' ? document.body.style.backgroundColor = '#1f1f1f' : document.body.style.backgroundColor = 'white'
+                
+                if (button !== undefined)
+                    button.innerHTML === 'Dark Mode' ? button.innerHTML = 'Burn My Eyes' : button.innerHTML = 'Dark Mode'
+
+                let tags = ['h1', 'h2', 'h3', 'a']
+        
+                tags.forEach(function(x){
+                    Array.from(document.getElementsByTagName(x)).forEach(function(x){
+                    x.style.color = x.style.color === 'white' ? 'black' : 'white'
+                    })
+                })
+            }
+        </script>
+    </body>
+</html>
